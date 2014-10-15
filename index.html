@@ -2,64 +2,102 @@
 <html>
 	<head>
 		<title>EZShopper</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	
 	<body>
+		
 		<!-- Navigation Bar at the top -->
-		<nav>
-		<div class="navbar navbar-inverse">
+		
+		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
-				<a href="index.html" class=" pull-left navbar-brand navbar-left">EZShopping</a>
-			
-				<button class= "navbar-toggle navbar-side" data-toggle="collapse" data-target=".navHeaderCollapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<div class = "collapse navbar-collapse navHeaderCollapse">
-				
-					<ul class="nav navbar-nav navbar-right">
-						<li ><a href="MyLists.html">MyLists</a></li></center>
-						<li><a href="Recipies.html">Recipies</a></li>
-						<li><a href="FindGroceries.html">Find Groceries</a></li>
-					</ul>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						
+					</button>
+					<a class="navbar-brand" href="index.html">EZShopping</a>
 				</div>
-			
-			
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="OldLists.html">Old Lists</a></li>
+					<li><a href="MyRecipies.html">My Recipies</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#about">Log Off</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
 			</div>
 		</div>
-		</nav>
-		<!-- Jumbotrons Getting Started -->
-		<div class = "container">
 		
-			<div class = "jumbotron">
-				<center><h1>Whats's new?</h1></center>
-				<center><p>Tell about new recipies added <p><center>
-				
-				<center><a class="btn btn-default">Show Recipies</a>
-				</center>
-			</div>
-			
-		<div>
+		<!-- Main Functionality Navigation -->
+		<div  id="mainFunction" class="container">
+			<ul id="mainFunctionList"class="nav nav-tabs">
+				<li class=""><a href="index.html"><center><span class="glyphicon glyphicon-home"></center></span>MyList</a></li>
+				<li class=""><a href="Recipies.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipies</a></li>
+			</ul>
+		</div> 
 		
-		<!-- Button to MyLists-->
-		<div class="container">
-			<center><a href="MyLists.html"><button type="button" class="btn btn btn-success btn-lg navbar-btn" href="MyLists.html">Create new Shopping list</button></a></center>
+		
+		<!-- Table with Products -->
+		<div id="insertTable"class="container">
+		<div > 
+			<table class="table table-striped " >
+				<thead>
+					<tr>
+						<td class="col-xs-1"><input type="checkbox" name="#" value="#"></td>
+						<td class="col-xs-7 "><p>Description</p></td>
+						<td class="col-xs-2 "><p>Amount</p></td>
+						<td class="col-xs-1"> </td>
+					</tr>
+				</thead>
+		
+				<tbody>
+					<tr>
+						<td class="col-xs-1"><input type="checkbox" name="#" value="#"></td>
+						<td class="col-xs-7"><input type="text" class="form-control" id="productInput" placeholder="Enter product"></td>
+						<td class="col-xs-2"><input type="text" class="form-control" id="productInput" placeholder="1"></td>
+						<td class="col-xs-1"><a class="close">x</a></td>
+					</tr>
+					<tr>
+						<td class="col-xs-1"><input type="checkbox" name="#" value="#"></td>
+						<td class="col-xs-7"><input type="text" class="form-control" id="productInput" placeholder="Enter product"></td>
+						<td class="col-xs-2"><input type="text" class="form-control" id="productInput" placeholder=""></td>
+						<td class="col-xs-1"><a class="close">x</a></td>
+					</tr>
+					<tr>
+						<td class="col-xs-1"><input type="checkbox" name="#" value="#"></td>
+						<td class="col-xs-7"><input type="text" class="form-control" id="productInput" placeholder="Enter product"></td>
+						<td class="col-xs-2"><input type="text" class="form-control" id="productInput" placeholder=""></td>
+						<td class="col-xs-1"><a class="close">x</a></td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		
 		</div>
 		
 		<!-- Footer -->
 		<div class="navbar navbar-default navbar-fixed-bottom">
-		
 			<div class="container">
-				<p class="navbar-text pull-left">Site Built Sven Rosenzweig</p>
-				<a class="navbar-btn btn-danger btn pull-right">Suscribe on Youtube</a>
-			<div>
-			
+				<div id="footer" class="btn-group btn-group-justified">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-success">Share List</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-danger" onclick="window.location.href='index.html'">Delete List</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-warning">Comment</button>
+					</div>
+				</div>	
+			</div>
 		</div>
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
 	

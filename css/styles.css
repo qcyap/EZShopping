@@ -1,0 +1,64 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#mainFunction{
+	position: fixed;
+	margin-top: 51px;
+	width: 100%;
+	background-color: #5bc0de;
+	display: inline;
+}
+
+
+table {
+        width: 100%;	
+		margin-top: 120px;
+    }
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+	display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+    /*text-align: left;*/
+}
+ tbody {
+    height: 100%;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}
+
+
+.close {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #d9534f;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  text-decoration: none;
+}
+.close:hover {
+  color: #d9534f;
+  text-decoration: none;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  cursor: pointer;
+}

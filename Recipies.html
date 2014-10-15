@@ -10,40 +10,101 @@
 	<body>
 	
 	<!-- Navigation Bar at the top -->
-		<nav>
-		<div class="navbar navbar-inverse">
+		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
-				<a href="index.html" class=" pull-left navbar-brand navbar-left">EZShopping</a>
-			
-				<button class= "navbar-toggle navbar-side" data-toggle="collapse" data-target=".navHeaderCollapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<div class = "collapse navbar-collapse navHeaderCollapse">
-				
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="MyLists.html">MyLists</a></li></center>
-						<li><a class="active" href="Recipies.html">Recipies</a></li>
-						<li><a href="FindGroceries.html">Find Groceries</a></li>
-					</ul>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						
+					</button>
+					<a class="navbar-brand" href="index.html">EZShopping</a>
 				</div>
-			
-	
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="OldLists.html">Old Lists</a></li>
+					<li><a href="MyRecipies.html">My Recipies</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#about">Log Off</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
 			</div>
 		</div>
 		
+		<!-- Main Functionality Navigation -->
+		<div  id="mainFunction" class="container">
+			<ul id="mainFunctionList"class="nav nav-tabs">
+				<li class=""><a href="index.html"><center><span class="glyphicon glyphicon-home"></center></span>MyList</a></li>
+				<li class=""><a href="Recipies.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipies</a></li>
+			</ul>
+		</div>
+		
+		
+		
+		
+		
+		<!-- Table with Products -->
+		<div id="insertTable"class="container">
+		
+		
+		<div > 
+			<table class="table table-striped " >
+				<thead>
+					<tr>
+						<td class="col-xs-1"><input type="checkbox" name="#" value="#"></td>
+						<td class="col-xs-4 "><p>MyRecipies</p></td>
+						<td class="col-xs-4 "><p>Cost</p></td>
+						<td class="col-xs-1"> </td>
+					</tr>
+				</thead>
+		
+				<tbody>
+					<tr>
+						<td class="col-xs-1"><input type="checkbox" name="#" value="#"></td>
+						<td class="col-xs-4"><p>Name 1</p></td>
+						<td class="col-xs-4"><p>$</p></td>
+						<td class="col-xs-1"><a class="close">x</a></td>
+					</tr>
+					<tr>
+						<td class="col-xs-1"><input type="checkbox" name="#" value="#"></td>
+						<td class="col-xs-4">Name 2</td>
+						<td class="col-xs-4"><p>$</p></td>
+						<td class="col-xs-1"><a class="close">x</a></td>
+					</tr>
+					<tr>
+						<td class="col-xs-1"><input type="checkbox" name="#" value="#"></td>
+						<td class="col-xs-4">Name 3</td>
+						<td class="col-xs-4"><p>$</p></td>
+						<td class="col-xs-1"><a class="close">x</a></td>
+					</tr>
+					
+				</tbody>
+			</table>
+			
+
+		</div>
+		
+		</div>
 		
 		<!-- Footer -->
 		<div class="navbar navbar-default navbar-fixed-bottom">
-		
 			<div class="container">
-				<p class="navbar-text pull-left">Site Built Sven Rosenzweig</p>
-				<a class="navbar-btn btn-danger btn pull-right">Suscribe on Youtube</a>
-			<div>
-			
+				<div id="footer" class="btn-group btn-group-justified">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-success">Add to List</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-danger" onclick="window.location.href='#'">Copy with </button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-warning">Comment</button>
+					</div>
+				</div>	
+			</div>
 		</div>
-		</nav>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
 	
