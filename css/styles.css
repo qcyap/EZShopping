@@ -1,64 +1,106 @@
 body::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
-#mainFunction{
+#mainFunction {
 	position: fixed;
 	margin-top: 51px;
 	width: 100%;
 	background-color: #5bc0de;
 	display: inline;
+	z-index: 2;
 }
 
-
 table {
-        width: 100%;	
-		margin-top: 120px;
-    }
-
-thead, tbody, tr, td, th { display: block; }
+	width: 100%;
+	margin-top: 120px;
+}
 
 tr:after {
-    content: ' ';
+	content: ' ';
 	display: block;
-    visibility: hidden;
-    clear: both;
+	visibility: hidden;
+	clear: both;
 }
 
 thead th {
-    height: 30px;
-    /*text-align: left;*/
+	height: 30px;
+	/*text-align: left;*/
 }
- tbody {
-    height: 100%;
-    overflow-y: auto;
+
+tbody {
+	height: 100%;
+	overflow-y: auto;
 }
 
 thead {
-    /* fallback */
+	/* fallback */
 }
-
 
 tbody td, thead th {
-    width: 19.2%;
-    float: left;
+	width: 19.2%;
+	float: left;
 }
 
+td {
+	height: 47px;
+}
 
 .close {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 18px;
-  color: #d9534f;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-  text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 18px;
+	color: #d9534f;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+	text-decoration: none;
 }
+
 .close:hover {
-  color: #d9534f;
-  text-decoration: none;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-  cursor: pointer;
+	color: #d9534f;
+	text-decoration: none;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	cursor: pointer;
+}
+
+.full_width_center {
+	width: 50%;
+	text-align: center;
+}
+
+input[type=text] {
+	width: 100% !important;
+	padding: 0px;
+	margin: 0px;
+}
+
+input[type=checkbox] {
+	width: 25px;
+	height: 25px;
+	padding: 10px;
+	margin: 0;
+}
+
+.editable-container, .editable-input, .twitter-typeahead, .editableform > .control-group.form-group, .tt-dropdown-menu {
+	width: 100% !important;
+}
+
+.editable-submit, .editable-cancel {
+	display: none;
+}
+
+#header {
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+#footer {
+	display: none;
+}
+
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
 }
