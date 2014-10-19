@@ -1,0 +1,126 @@
+<!DOCTYPE  html>
+<html>
+	<head>
+		<title>EZShopping</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<!-- Cascading Stylesheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-editable.css" rel="stylesheet">
+		<link href="css/typeahead.js-bootstrap.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/createRecepie.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		
+		<!-- Navigation Bar at the top Test-->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div id="header" class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						
+					</button>
+					<a class="navbar-brand" href="index.html">EZShopping</a>
+				</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="mylists.html">My Lists</a></li>
+					<li><a href="myrecipes.html">My Recipes</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#about">Sign Off</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		
+		<!-- Main Functionality Navigation -->
+		<div id="mainFunction" class="container">
+			<ul id="mainFunctionList" class="nav nav-tabs">
+				<li class="full_width_center active"><a href="index.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
+				<li class="full_width_center"><a href="recipes.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipes</a></li>
+			</ul>
+		</div> 
+		
+		<div class="container">
+			<form id="inputDataRecepie" role="form">
+				<!-- Heading -->
+				<div class="form-group">
+					<h4 class="col-sm-12">Create New Recepie</h4>
+				</div>
+				<!-- Name -->
+				<div class="form-group">
+					<label for="recepieName" class="col-sm-12">Name</label>
+					<label class="col-sm-12">
+					<input type="text" class="col-sm-12 form-control" placeholder="Name">
+					</label>
+				</div>
+				<!-- Checkbox -->
+				<div class="form-group">
+					<label for="privacy" class="col-sm-6">Privacy of Recepie</label>
+					 <div class="checkbox radio-inline">
+						<label class="col-sm-2">
+							<input type="radio"> Private
+						</label>
+						<label class="col-sm-2">
+							<input type="radio"> Public
+						</label>
+					</div>
+				</div>
+				<!-- Ingriedients -->
+				<div class="form-group">
+					 <label for="ingriedients" class="col-sm-12">Ingriedients</label>
+		
+			
+				<table class="table table-condensed col-sm-12" id="ingriedientsTable">
+					<thead>
+						<tr>
+							<td class="col-xs-8"><p>Description</p></td>
+							<td class="col-xs-4"><p>Amount</p></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="col-xs-8"><p>Description</p></td>
+							<td class="col-xs-4"><p>Amount</p></td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<!-- Dierections -->
+				<div class="form-group">
+					 <label class="col-sm-12" for="directions">Directions</label>
+						<textarea class="col-sm-12 form-control" rows="5"></textarea>
+				</div>
+			</form>
+			
+			
+		</div>
+		
+		<!-- Footer -->
+		<div id="footer" class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container">
+				<div class="btn-group btn-group-justified">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-success">Save</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-danger" onclick="window.location.href='createReceppie.html'">Cancel</button>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<!-- JavaScript -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-editable.min.js"></script>
+		<script src="js/typeahead.js"></script>
+		<script src="js/typeaheadjs.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
