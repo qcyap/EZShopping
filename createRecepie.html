@@ -41,33 +41,36 @@
 		<!-- Main Functionality Navigation -->
 		<div id="mainFunction" class="container">
 			<ul id="mainFunctionList" class="nav nav-tabs">
-				<li class="full_width_center active"><a href="index.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
+				<li class="full_width_center"><a href="index.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
 				<li class="full_width_center"><a href="recipes.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipes</a></li>
 			</ul>
 		</div> 
 		
 		<div class="container">
-			<form id="inputDataRecepie" role="form">
+			<form class="class="form-horizontal" id="inputDataRecepie" role="form">
+			
 				<!-- Heading -->
 				<div class="form-group">
 					<h4 class="col-sm-12">Create New Recepie</h4>
 				</div>
 				<!-- Name -->
-				<div class="form-group">
-					<label for="recepieName" class="col-sm-12">Name</label>
-					<label class="col-sm-12">
-					<input type="text" class="col-sm-12 form-control" placeholder="Name">
-					</label>
+				<div class="form-group form-inline">
+					<label for="recepieName" class="col-sm-2">Name</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Name">
+					</div>
 				</div>
+				
 				<!-- Checkbox -->
-				<div class="form-group">
-					<label for="privacy" class="col-sm-6">Privacy of Recepie</label>
-					 <div class="checkbox radio-inline">
-						<label class="col-sm-2">
-							<input type="radio"> Private
+				<div class="form-group form-horizontal">
+					<label for="privacy" class="col-sm-12">Privacy of Recepie</label>
+					 <div class="col-sm-12">
+						
+						<label class="radio-inline">
+							<input type="radio" name="privacy"> Private
 						</label>
-						<label class="col-sm-2">
-							<input type="radio"> Public
+						<label class="radio-inline">
+							<input type="radio" name="privacy"> Public
 						</label>
 					</div>
 				</div>
@@ -75,36 +78,40 @@
 				<div class="form-group">
 					 <label for="ingriedients" class="col-sm-12">Ingriedients</label>
 		
-			
-				<table class="table table-condensed col-sm-12" id="ingriedientsTable">
+				<div class="col-xs-12">
+				<table class="table table-striped " id="ingriedientsTable">
 					<thead>
 						<tr>
-							<td class="col-xs-8"><p>Description</p></td>
-							<td class="col-xs-4"><p>Amount</p></td>
+							<td class="col-sm-8"><p>Description</p></td>
+							<td class="col-sm-4"><p>Amount</p></td>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="col-xs-8"><p>Description</p></td>
-							<td class="col-xs-4"><p>Amount</p></td>
+							<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
+							<td class="col-xs-4"><input type="text" class="form-control" placeholder=""></td>
+						</tr>
+						<tr>
+							<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
+							<td class="col-xs-4"><input type="text" class="form-control" placeholder=""></td>
+						</tr>
+						<tr>
+							<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
+							<td class="col-xs-4"><input type="text" class="form-control" placeholder=""></td>
 						</tr>
 					</tbody>
 				</table>
+				</div>
 	
 				<!-- Dierections -->
 				<div class="form-group">
 					 <label class="col-sm-12" for="directions">Directions</label>
-						<textarea class="col-sm-12 form-control" rows="5"></textarea>
+					 <div class="col-sm-12">
+						<textarea class="form-control" rows="5"></textarea>
+					 </div>
 				</div>
-			</form>
-			
-			
-		</div>
-		
-		<!-- Footer -->
-		<div id="footer" class="navbar navbar-default navbar-fixed-bottom">
-			<div class="container">
-				<div class="btn-group btn-group-justified">
+				
+				<div class="col-sm-12 btn-group btn-group-justified">
 					<div class="btn-group">
 						<button type="button" class="btn btn-default btn-success">Save</button>
 					</div>
@@ -112,8 +119,12 @@
 						<button type="button" class="btn btn-default btn-danger" onclick="window.location.href='createReceppie.html'">Cancel</button>
 					</div>
 				</div>	
-			</div>
+			</form>
+			
+			
 		</div>
+		
+		
 		
 		<!-- JavaScript -->
 		<script src="js/jquery.min.js"></script>
