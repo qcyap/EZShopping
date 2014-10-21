@@ -122,26 +122,30 @@ input[type=checkbox] {
 	color: #333333;
 }
 
-.highlight1_bg	{
+.highlight1_bg {
 	background-color: #32658D;
 }
 
-.highlight1_txt	{
+.highlight1_txt {
 	color: #32658D;
 }
 
-.highlight2_bg	{
+.highlight2_bg {
 	background-color: #3D79A8;
 }
 
-.highlight2_txt	{
+.highlight2_txt {
 	color: #3D79A8;
 }
 
-.highlight3_bg	{
+.highlight3_bg {
 	background-color: #488FC7;
 }
 
-.highlight3_txt	{
+.highlight3_txt {
 	color: #488FC7;
+}
+
+td.strikeout {
+	text-decoration: line-through;
 }
