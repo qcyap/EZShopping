@@ -6,7 +6,7 @@ body::-webkit-scrollbar {
 	position: fixed;
 	margin-top: 51px;
 	width: 100%;
-	background-color: #5bc0de;
+	background-color: #C4C4C4;
 	display: inline;
 	z-index: 2;
 }
@@ -79,6 +79,10 @@ td:first-child {
 	text-align: center;
 }
 
+.full_width_center.active {
+	border-bottom: 5px solid #488FC7;
+}
+
 input[type=text] {
 	width: 100% !important;
 	padding: 0px;
@@ -108,4 +112,36 @@ input[type=checkbox] {
 .container {
 	padding-left: 0px;
 	padding-right: 0px;
+}
+
+.bg {
+	background-color: #C4C4C4;
+}
+
+.txt {
+	color: #333333;
+}
+
+.highlight1_bg	{
+	background-color: #32658D;
+}
+
+.highlight1_txt	{
+	color: #32658D;
+}
+
+.highlight2_bg	{
+	background-color: #3D79A8;
+}
+
+.highlight2_txt	{
+	color: #3D79A8;
+}
+
+.highlight3_bg	{
+	background-color: #488FC7;
+}
+
+.highlight3_txt	{
+	color: #488FC7;
 }
