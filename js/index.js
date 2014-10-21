@@ -16,6 +16,7 @@ var Index = (function(window, $) {
 	_bindUIEvent = function() {
 		_initXEditable();
 		_loadScrollEvents();
+		_loadSaveEvents();
 	},
 	
 	_initXEditable = function() {
@@ -118,6 +119,15 @@ var Index = (function(window, $) {
 				$("#footer").slideUp(); // disappear
 			}
 			//lastScrollTop = scrollTop;
+		});
+	},
+	
+	_loadSaveEvents = function() {
+		var modal = $('#modal');
+		$('#save').click(function() {
+			modal.find('.modal-content').html('<div class="modal-body"></div>');
+			modal.find('.modal-body').html('<h4">Your list has been saved!<br>Shortlink: http://goo.gl/xDja3e</h4>');
+			modal.modal('show');
 		});
 	};
 	
