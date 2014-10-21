@@ -1,0 +1,129 @@
+<!DOCTYPE  html>
+<html>
+	<head>
+		<title>EZShopping</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<!-- Cascading Stylesheets -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/bootstrap-editable.css" rel="stylesheet">
+		<link href="../css/typeahead.js-bootstrap.css" rel="stylesheet">
+		<link href="../css/styles.css" rel="stylesheet">
+		<link href="../css/createRecepie.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		
+		<!-- Navigation Bar at the top Test-->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div id="header" class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						
+					</button>
+					<a class="navbar-brand" href="index.html">EZShopping</a>
+				</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="../mylists.html">My Lists</a></li>
+					<li><a href="../myrecipes.html">My Recipes</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#about">Sign Off</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		
+		<!-- Main Functionality Navigation -->
+		<div id="mainFunction" class="container">
+			<ul id="mainFunctionList" class="nav nav-tabs">
+				<li class="full_width_center"><a href="../index.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
+				<li class="full_width_center"><a href="../recipes.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipes</a></li>
+			</ul>
+		</div> 
+		
+		<div class="container">
+			<form class="class="form-horizontal" id="inputDataRecepie" role="form">
+			
+				<!-- Heading -->
+				<div class="form-group">
+					<h4 class="col-sm-12">Haianese Chicken Rice</h4>
+				</div>
+				
+				<!-- Ingriedients -->
+				<div class="form-group">
+					 <label for="ingriedients" class="col-sm-12">Ingriedients</label>
+					<p></p>
+				<div class="col-xs-12">
+				<table class="table table-striped " id="ingriedientsTable">
+					<thead>
+						<tr>
+							<td class="col-sm-8"><p>Description</p></td>
+							<td class="col-sm-4"><p>Amount</p></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="col-xs-8"><p>Slices fresh ginger, smashed</p></td>
+							<td class="col-xs-4"><p>4</p></td>
+						</tr>
+						<tr>
+							<td class="col-xs-8"><p>Shallots</p></td>
+							<td class="col-xs-4"><p>4</p></td>
+						</tr>
+						<tr>
+							<td class="col-xs-8"><p>English cucumber</p></td>
+							<td class="col-xs-4"><p>1</p></td>
+						</tr>
+						<tr>
+							<td class="col-xs-8"><p>Chicken</p></td>
+							<td class="col-xs-4"><p>1</p></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+	
+				<!-- Dierections -->
+				<div class="form-group">
+					 <label class="col-sm-12" for="directions">Directions</label>
+					 <div class="col-sm-12">
+						<p>Prepare chicken and broth:?Remove fat from cavity of chicken and reserve for rice. Rub chicken inside and out with 1 teaspoon salt.
+						Bring water with remaining 2 teaspoons salt and ginger to a boil in a 6- to 8-quart pot wide enough to hold chicken. Put chicken, breast down, in water and return to a boil, covered. 
+						Simmer chicken, partially covered, 20 minutes and remove from heat. Let chicken stand in hot broth, covered and undisturbed, until just cooked through, 15 to 20 minutes.
+						Letting broth drain from chicken cavity into pot, transfer chicken to a large bowl of ice and cold water and reserve broth for rice and soup. Cool chicken completely, turning once. Drain chicken and pat dry with paper towels. Cut into serving pieces.
+						Make rice:?Cook reserved chicken fat in a 3-quart heavy saucepan over moderate heat, stirring, until rendered, then discard solids. Add vegetable oil if necessary to make 2 tablespoons fat.
+						Wash rice under cold running water until water runs clear and drain well.
+						Cook shallots in fat over moderate heat, stirring, until browned. Add garlic and cook, stirring, 1 minute. Add rice and cook, stirring gently, 1 minute.
+						Add 3 cups reserved broth and bring to a boil. Boil until liquid on surface is evaporated and small bubbles appear from holes in rice, 3 to 4 minutes.
+						Cover and cook over very low heat until rice is tender and liquid is absorbed, about 15 minutes more. Remove from heat and let stand, covered and undisturbed, 5 minutes. Fluff rice with a fork and cover.</p>
+					 </div>
+				</div>
+				
+				<div class="col-sm-12 btn-group btn-group-justified">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-success">Save</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default btn-danger" onclick="window.location.href='createReceppie.html'">Cancel</button>
+					</div>
+				</div>	
+			</form>
+			
+			
+		</div>
+		
+		
+		
+		<!-- JavaScript -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-editable.min.js"></script>
+		<script src="js/typeahead.js"></script>
+		<script src="js/typeaheadjs.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
