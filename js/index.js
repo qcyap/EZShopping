@@ -164,6 +164,12 @@ var Index = (function(window, $) {
 	
 	_loadSaveEvents = function() {
 		$('#save').click(function() {
+			if (document.domain == '127.0.0.1' || document.domain == 'localhost') {
+				saveModal.find('.modal-body').html('<span>Your list has been saved!<br>Shortlink for sharing: <a href="http://goo.gl/WkwXJY">http://goo.gl/WkwXJY</a></span>');
+			}
+			else {
+				saveModal.find('.modal-body').html('<span>Your list has been saved!<br>Shortlink for sharing: <a href="http://goo.gl/8SkjI8">http://goo.gl/8SkjI8</a></span>');
+			}
 			saveModal.modal('show', calibrateSaveModal());
 		});
 	},
