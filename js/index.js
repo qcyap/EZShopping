@@ -17,11 +17,50 @@ var Index = (function(window, $) {
 	},
 	
 	_bindUIEvent = function() {
+		_initButtons();
 		_initXEditable();
 		_loadScrollEvents();
 		_loadCommentsEvents();
 		_loadSaveEvents();
 		_loadResizeEvents();
+	},
+	
+	_initButtons = function() {
+		$('.close').click(function() {
+			var parentRow = $(this).parents('tr');
+			parentRow.remove();
+			if (parentRow.hasClass('recipe')) {
+				if (parentRow.hasClass('rd1')) {
+					$('.recipe.rh1').data('item', $('.recipe.rh1').data('item') - 1);
+					if ($('.recipe.rh1').data('item') == 0) {
+						$('.recipe.rh1').remove();
+					}
+				}
+				else {
+					$('.recipe.rd1').remove();
+				}
+			}
+		});
+		
+		$('.check').click(function() {
+			var descriptionColumn = $(this).parent().siblings(':nth-child(2)');
+			var amountColumn = $(this).parent().siblings(':nth-child(3)');
+			
+			if ($(this).hasClass('unchecked')) {
+				$(this).removeClass('unchecked');
+				$(this).addClass('checked');
+				$(this).html('<i class="glyphicon glyphicon-check"></i>');
+				descriptionColumn.addClass('strikeout');
+				amountColumn.addClass('strikeout');
+			}
+			else {
+				$(this).removeClass('checked');
+				$(this).addClass('unchecked');
+				$(this).html('<i class="glyphicon glyphicon-unchecked"></i>');
+				descriptionColumn.removeClass('strikeout');
+				amountColumn.removeClass('strikeout');
+			}
+		});
 	},
 	
 	_initXEditable = function() {
@@ -56,7 +95,7 @@ var Index = (function(window, $) {
 			var deleteColumn = $(this).parent().siblings(':last');
 			
 			if (params.newValue != '') {
-				checkboxColumn.html('<input class="check" type="checkbox" name="#" value="#">');
+				checkboxColumn.html('<a class="check unchecked"><i class="glyphicon glyphicon-unchecked"></i></a>');
 				deleteColumn.html('<a class="close"><i class="glyphicon glyphicon-remove"></i></a>');
 			}
 			else {
@@ -65,24 +104,8 @@ var Index = (function(window, $) {
 			}
 			
 			$('.close').unbind('click');
-			$('.close').click(function() {
-				$(this).parents('tr').remove();
-			});
-			
 			$('.check').unbind('click');
-			$('.check').click(function() {
-				var descriptionColumn = $(this).parent().siblings(':nth-child(2)');
-				var amountColumn = $(this).parent().siblings(':nth-child(3)');
-				
-				if ($(this).is(':checked')) {
-					descriptionColumn.addClass('strikeout');
-					amountColumn.addClass('strikeout');
-				}
-				else {
-					descriptionColumn.removeClass('strikeout');
-					amountColumn.removeClass('strikeout');
-				}
-			});
+			_initButtons();
 		});
 	},
 	
