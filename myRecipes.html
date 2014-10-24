@@ -1,0 +1,99 @@
+<!DOCTYPE  html>
+<html>
+	<head>
+		<title>EZShopping</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<!-- Cascading Stylesheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-editable.css" rel="stylesheet">
+		<link href="css/typeahead.js-bootstrap.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<script language="javascript">
+		function deleteRow(r)
+		{
+			var i = r.parentNode.parentNode.rowIndex;
+			document.getElementById("mainTableList").deleteRow(i);
+		}
+		</script> 
+	</head>
+	
+	<body>
+		
+		<!-- Navigation Bar at the top Test-->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div id="header" class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						
+					</button>
+					<a class="navbar-brand" href="index.html">EZShopping</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="myLists.html">My Lists</a></li>
+						<li><a href="myRecipes.html">My Recipes</a></li>
+						<li><a href="#settings">Settings</a></li>
+						<li><a href="#signoff">Sign Off</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		
+		<!-- Main Functionality Navigation -->
+		<div id="mainFunction" class="container">
+			<ul id="mainFunctionList" class="nav nav-tabs">
+				<li class="full_width_center active"><a href="index.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
+				<li class="full_width_center"><a href="recipes.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipes</a></li>
+			</ul>
+		</div> 
+		
+		<!-- Table with Products -->
+		<div id="mainTable" class="container">
+			<table id="mainTableList" class="table table-striped">
+				<thead>
+					<tr>
+						<th class="col-xs-8"><p>MyRecipes</p></td>
+						<th class="col-xs-4"><p></p></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="col-xs-8"><a href=""><p>Corn and Zucchini Salad with Feta</p></a></td>
+						<td class="col-xs-4"><button onclick="deleteRow(this)" class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
+					</tr>
+					<tr>
+						<td class="col-xs-8"><a href="#"><p>Spicy Sesame Noodles with Chopped Peanuts</p></a></td>
+						<td class="col-xs-4"><button onclick="deleteRow(this)" class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
+					</tr>
+					<tr>
+						<td class="col-xs-8"><a href="myList/myList-20141023-1.html"><p>Pizza with Mozzarella</p></a></td>
+						<td class="col-xs-4"><button onclick="deleteRow(this)" class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<div id="footer" class="navbar-default navbar-fixed-bottom">
+			<div class="container">
+				<div class="btn-group btn-group-justified">
+					<div class="btn-group">
+						<a href="createRecipe.html"><button type="button" id="createRecipe" class="btn btn-default bg"><center><span class="glyphicon glyphicon-save"></center></span>Create new Recipe</button>
+					</div>
+				</div>	
+			</div>
+			</div>
+		</div>
+		
+		
+		<!-- Footer -->
+		
+		<!-- JavaScript -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
