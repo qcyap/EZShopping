@@ -11,7 +11,16 @@
 		<link href="css/styles.css" rel="stylesheet">
 		
 		<script language="javascript">
-			
+			function like(){
+				 var d = new Date();
+				d.setTime(d.getTime() + (30*24*60*60*1000));
+				var expires = "expires="+d.toUTCString();
+				cname="EZShopping";
+				cvalue="Rice";
+				document.cookie = cname + "=" + cvalue + "; " + expires;
+				
+				alert("Cookie "+ document.cookie+ " created");
+			}
 			
 		</script>
 	</head>
@@ -61,7 +70,7 @@
 				<tbody>
 					<tr>
 						<td class="col-xs-8"><a href="recipe/HainaneseChickenRice.html"><p>Hainanese Chicken Rice</p></a></td>
-						<td class="col-xs-4"><a onclick="like(this,'Hainanese Chicken Rice')" class="close"><i class="glyphicon glyphicon-heart"></i></a></td>
+						<td class="col-xs-4"><a onclick="like()" class="close"><i class="glyphicon glyphicon-heart"></i></a></td>
 					</tr>
 					<tr>
 						<td class="col-xs-8"><a href="#">Tandoori-Spiced Chicken Breasts</a></td>
