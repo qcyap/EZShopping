@@ -1,8 +1,8 @@
 $(document).ready( function() {
-	IndexWithChickenRice.init();
+	EzlistWithChickenRice.init();
 });
 
-var IndexWithChickenRice = (function(window, $) {
+var EzlistWithChickenRice = (function(window, $) {
 	
 	var init = function() {
 		_bindUIEvent();

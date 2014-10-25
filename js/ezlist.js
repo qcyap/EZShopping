@@ -1,8 +1,8 @@
 $(document).ready( function() {
-	Index.init();
+	Ezlist.init();
 });
 
-var Index = (function(window, $) {
+var Ezlist = (function(window, $) {
 	var commentsModal, saveModal, createModal;
 	var content;
 	var shareLink, saveState;
@@ -27,7 +27,7 @@ var Index = (function(window, $) {
 		_loadFooterEvents();
 		_loadScrollEvents();
 		_loadCommentsEvents();
-		_loadSaveEvents();
+		_loadShareEvents();
 		_loadCreateEvents();
 		_loadResizeEvents();
 	},
@@ -176,23 +176,13 @@ var Index = (function(window, $) {
 		});
 	},
 	
-	_loadSaveEvents = function() {
+	_loadShareEvents = function() {
 		shareLink = (document.domain == '127.0.0.1' || document.domain == 'localhost')? 'http://goo.gl/WkwXJY': 'http://goo.gl/8SkjI8';
 			
 		$('#save').click(function() {
 			saveState = true;
 			saveModal.find('.modal-body').html('<span>Share link <a href="' + shareLink + '">' + shareLink + '</a> copied to clipboard!</span>');
 			saveModal.modal('show', calibrateSaveModal());
-		});
-		
-		$('#save').zclip({
-			path: 'js/vendor/ZeroClipboard.swf',
-			copy: function() {
-				return shareLink;
-			},
-			afterCopy: function() {
-				return false;
-			}
 		});
 	},
 	

@@ -5,11 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		
 		<!-- Cascading Stylesheets -->
-		<link href="../css/bootstrap.min.css" rel="stylesheet">
-		<link href="../css/bootstrap-editable.css" rel="stylesheet">
-		<link href="../css/typeahead.js-bootstrap.css" rel="stylesheet">
+		<link href="../css/vendor/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/vendor/bootstrap-editable.css" rel="stylesheet">
+		<link href="../css/vendor/typeahead.js-bootstrap.css" rel="stylesheet">
 		<link href="../css/styles.css" rel="stylesheet">
-		<link href="../css/index.css" rel="stylesheet">
+		<link href="../css/ezlist.css" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -41,7 +41,7 @@
 		<!-- Main Functionality Navigation -->
 		<div id="mainFunction" class="container">
 			<ul id="mainFunctionList" class="nav nav-tabs">
-				<li class="full_width_center active"><a href="../index.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
+				<li class="full_width_center active"><a href="../ezlist.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
 				<li class="full_width_center"><a href="../recipes.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipes</a></li>
 			</ul>
 		</div> 
@@ -203,22 +203,26 @@
 					</div>
 					<div class="modal-footer">
 						<button type="cancel" class="btn" data-dismiss="modal">Cancel</button>
-						<button type="button" class="btn btn-primary" onclick="window.location.href='../index.html'; return false;">Confirm</button>
+						<button type="button" class="btn btn-primary" onclick="window.location.href='../ezlist.html'; return false;">Confirm</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		
 		<!-- JavaScript -->
-		<script src="../js/jquery.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
-		<script src="../js/bootstrap-editable.min.js"></script>
-		<script src="../js/typeahead.js"></script>
-		<script src="../js/typeaheadjs.js"></script>
-		<script src="../js/index.js"></script>
-		<script>
+		<script src="../js/vendor/jquery.min.js"></script>
+		<script src="../js/vendor/jquery.cookie.js"></script>
+		<script src="../js/vendor/jquery.zclip.min.js"></script>
+		<script src="../js/vendor/bootstrap.min.js"></script>
+		<script src="../js/vendor/bootstrap-editable.min.js"></script>
+		<script src="../js/vendor/typeahead.js"></script>
+		<script src="../js/vendor/typeaheadjs.js"></script>
+		<script src="../js/clipboard.js"></script>
+		<script src="../js/ezlist.js"></script>
+		<script type="text/javascript">
 			$(document).ready(function() {
-				Index.changeSaveState(true);
+				Ezlist.changeSaveState(true);
+				Clipboard.init('../');
 			});
 		</script>
 	</body>

@@ -1,8 +1,0 @@
-td.strikeout {
-	text-decoration: line-through;
-}
-
-.modal.fade:not(.in).bottom .modal-dialog {
-	-webkit-transform: translate3d(0, 125%, 0);
-	transform: translate3d(0, 125%, 0);
-}

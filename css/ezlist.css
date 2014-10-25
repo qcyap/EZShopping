@@ -1,0 +1,38 @@
+td:first-child {
+	min-width: 41px;
+}
+
+td:last-child {
+	min-width: 36px;
+}
+
+.check,.dropdown {
+	font-size: 20px;
+}
+
+.check:hover, .dropdown:hover {
+	cursor: pointer;
+}
+
+.editable-container, .editable-input, .twitter-typeahead, .editableform > .control-group.form-group, .tt-dropdown-menu {
+	width: 100% !important;
+}
+
+.editable-submit, .editable-cancel {
+	display: none;
+}
+
+td.strikeout {
+	text-decoration: line-through;
+}
+
+.modal.fade:not(.in).bottom .modal-dialog {
+	-webkit-transform: translate3d(0, 125%, 0);
+	transform: translate3d(0, 125%, 0);
+}
+
+#save.hover, #save.active {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color:#adadad;
+}

@@ -10,35 +10,6 @@
 		<link href="css/vendor/typeahead.js-bootstrap.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 		<link href="css/createRecipe.css" rel="stylesheet">
-		
-		<script language="javascript">
-		function deleteRow(r)
-		{
-			var i = r.parentNode.parentNode.rowIndex;
-			document.getElementById("ingriedientsTable").deleteRow(i);
-		}
-		function addRow(r)
-		{
-			var table = document.getElementById("ingriedientsTable");
-			var row = table.insertRow(table.rows.length);
-			
-		
-			var td1 = document.createElement( "td" );
-            var td2 = document.createElement( "td" );
-			
-            td1.innerHTML = '<a href="#" class="" data-type="typeaheadjs"><p>Description</p></a>';
-            td2.innerHTML = '<button class="" onclick="addRow(this)" ><p>Click</p></a>';
-			
-			
-			row.appendChild( td1 );
-            row.appendChild( td2 );
-			
-			document.getElementById(td1).className = "";
-			document.getElementById(td2).className = "";
-			
-			
-		}
-		</script> 
 	</head>
 	
 	<body>
@@ -70,29 +41,29 @@
 		<!-- Main Functionality Navigation -->
 		<div id="mainFunction" class="container">
 			<ul id="mainFunctionList" class="nav nav-tabs">
-				<li class="full_width_center"><a href="index.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
+				<li class="full_width_center"><a href="ezlist.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
 				<li class="full_width_center"><a href="recipes.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipes</a></li>
 			</ul>
 		</div> 
 		
 		<div class="container">
-			<form class="class="form-horizontal" id="inputDataRecepie" role="form">
+			<form id="inputDataRecipe" role="form">
 				<!-- Heading -->
 				<div class="form-group">
-					<h4 class="col-sm-12">Create New Recepie</h4>
+					<h4 class="col-sm-12">Create New Recipe</h4>
 				</div>
 				<!-- Name -->
-				<div class="form-group form-inline">
-					<label for="recepieName" class="col-sm-2">Name</label>
-					<div class="col-sm-10">
+				<div class="form-group">
+					<label for="recipeName" class="col-sm-3" style="padding-top: 6px;">Name</label>
+					<div class="col-sm-9">
 						<input type="text" class="form-control" placeholder="Name">
 					</div>
 				</div>
 				
 				<!-- Checkbox -->
-				<div class="form-group form-horizontal">
-					<label for="privacy" class="col-sm-12">Privacy of Recepie</label>
-					 <div class="col-sm-12">
+				<div class="form-group">
+					<label for="privacy" class="col-xs-3">Privacy of Recipe</label>
+					 <div class="col-sm-9">
 						
 						<label class="radio-inline">
 							<input type="radio" name="privacy"> Private
@@ -102,45 +73,45 @@
 						</label>
 					</div>
 				</div>
+				
 				<!-- Ingriedients -->
 				<div class="form-group">
-					 <label for="ingriedients" class="col-sm-12">Ingriedients</label>
+					<label for="ingredients" class="col-sm-12">Ingredients</label>
 		
-				<div class="col-xs-12">
-				<table class="table table-striped " id="ingriedientsTable">
-					<thead>
-						<tr>
-							<td class="col-xs-8"><p>Description</p></td>
-							<td class="col-xs-4"><p>Amount</p></td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
-							<td class="col-xs-2"><input type="text" class="form-control" placeholder=""></td>
-						</tr>
-						<tr>
-							<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
-							<td class="col-xs-2"><input type="text" class="form-control" placeholder=""></td>
-						</tr>
-						<tr>
-							<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
-							<td class="col-xs-2"><input type="text" class="form-control" placeholder=""></button></td>
-						</tr>
-					</tbody>
-				</table>
+					<div class="col-xs-12">
+						<table class="table table-striped " id="ingriedientsTable">
+							<thead>
+								<tr>
+									<td class="col-xs-8"><p>Description</p></td>
+									<td class="col-xs-4"><p>Amount</p></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
+									<td class="col-xs-2"><input type="text" class="form-control" placeholder=""></td>
+								</tr>
+								<tr>
+									<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
+									<td class="col-xs-2"><input type="text" class="form-control" placeholder=""></td>
+								</tr>
+								<tr>
+									<td class="col-xs-8"><input type="text" class="form-control" placeholder=""></td>
+									<td class="col-xs-2"><input type="text" class="form-control" placeholder=""></button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 	
-				<!-- Dierections -->
+				<!-- Directions -->
 				<div class="form-group">
 					 <label class="col-sm-12" for="directions">Directions</label>
 					 <div class="col-sm-12">
 						<textarea class="form-control" rows="6"></textarea>
 					 </div>
 				</div>
-			</form>
-			
-			</div>	
+			</form>	
 		</div>
 		
 		<!-- Footer -->
@@ -165,6 +136,31 @@
 		<script src="js/vendor/bootstrap-editable.min.js"></script>
 		<script src="js/vendor/typeahead.js"></script>
 		<script src="js/vendor/typeaheadjs.js"></script>
-		<script src="js/index.js"></script>
+		<script type="text/javascript">
+			function deleteRow(r)
+			{
+				var i = r.parentNode.parentNode.rowIndex;
+				document.getElementById("ingriedientsTable").deleteRow(i);
+			}
+			function addRow(r)
+			{
+				var table = document.getElementById("ingriedientsTable");
+				var row = table.insertRow(table.rows.length);
+				
+			
+				var td1 = document.createElement( "td" );
+				var td2 = document.createElement( "td" );
+				
+				td1.innerHTML = '<a href="#" class="" data-type="typeaheadjs"><p>Description</p></a>';
+				td2.innerHTML = '<button class="" onclick="addRow(this)" ><p>Click</p></a>';
+				
+				
+				row.appendChild( td1 );
+				row.appendChild( td2 );
+				
+				document.getElementById(td1).className = "";
+				document.getElementById(td2).className = "";
+			}
+		</script> 
 	</body>
 </html>
