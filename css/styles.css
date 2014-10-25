@@ -157,3 +157,16 @@ input[type=checkbox] {
 .highlight3_txt {
 	color: #488FC7;
 }
+
+a:hover,a:active {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color:#adadad;
+}
+
+/* Explicit CSS due to hidden Flash button for clipboard function */
+#save.hover, #save.active {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color:#adadad;
+}

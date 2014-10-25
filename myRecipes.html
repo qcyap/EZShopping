@@ -5,20 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		
 		<!-- Cascading Stylesheets -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/bootstrap-editable.css" rel="stylesheet">
-		<link href="css/typeahead.js-bootstrap.css" rel="stylesheet">
+		<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+		<link href="css/vendor/bootstrap-editable.css" rel="stylesheet">
+		<link href="css/vendor/typeahead.js-bootstrap.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
-		
-		<script language="javascript">
-		
-		
-		function deleteRow(r)
-		{
-			var i = r.parentNode.parentNode.rowIndex;
-			document.getElementById("mainTableList").deleteRow(i);
-		}		
-		</script> 
 	</head>
 	
 	<body>
@@ -95,7 +85,14 @@
 		<!-- Footer -->
 		
 		<!-- JavaScript -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script language="javascript">
+			function deleteRow(r)
+			{
+				var i = r.parentNode.parentNode.rowIndex;
+				document.getElementById("mainTableList").deleteRow(i);
+			}		
+		</script> 
 	</body>
 </html>

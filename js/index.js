@@ -5,7 +5,7 @@ $(document).ready( function() {
 var Index = (function(window, $) {
 	var commentsModal, saveModal, createModal;
 	var content;
-	var saveState;
+	var shareLink, saveState;
 	
 	var init = function() {
 		commentsModal = $('#commentsModal');
@@ -177,15 +177,22 @@ var Index = (function(window, $) {
 	},
 	
 	_loadSaveEvents = function() {
+		shareLink = (document.domain == '127.0.0.1' || document.domain == 'localhost')? 'http://goo.gl/WkwXJY': 'http://goo.gl/8SkjI8';
+			
 		$('#save').click(function() {
 			saveState = true;
-			if (document.domain == '127.0.0.1' || document.domain == 'localhost') {
-				saveModal.find('.modal-body').html('<span>Your list has been saved!<br>Shortlink for sharing: <a href="http://goo.gl/WkwXJY">http://goo.gl/WkwXJY</a></span>');
-			}
-			else {
-				saveModal.find('.modal-body').html('<span>Your list has been saved!<br>Shortlink for sharing: <a href="http://goo.gl/8SkjI8">http://goo.gl/8SkjI8</a></span>');
-			}
+			saveModal.find('.modal-body').html('<span>Share link <a href="' + shareLink + '">' + shareLink + '</a> copied to clipboard!</span>');
 			saveModal.modal('show', calibrateSaveModal());
+		});
+		
+		$('#save').zclip({
+			path: 'js/vendor/ZeroClipboard.swf',
+			copy: function() {
+				return shareLink;
+			},
+			afterCopy: function() {
+				return false;
+			}
 		});
 	},
 	
