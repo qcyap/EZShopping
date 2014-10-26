@@ -31,7 +31,7 @@ td.strikeout {
 	transform: translate3d(0, 125%, 0);
 }
 
-#save.hover, #save.active {
+#share.hover, #share.active {
 	color: #333;
 	background-color: #e6e6e6;
 	border-color:#adadad;
