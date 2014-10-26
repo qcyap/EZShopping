@@ -1,6 +1,7 @@
 /* All CSS */
 body::-webkit-scrollbar {
 	display: none;
+	 background-color: yellow;
 }
 
 table {
