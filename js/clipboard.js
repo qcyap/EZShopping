@@ -2,7 +2,7 @@ var Clipboard = (function(window, $) {
 	var copyLink;
 	
 	var init = function(relativePath) {
-		_copy(relativePath);
+		//_copy(relativePath);
 	},
 	
 	_copy = function(relativePath) {
