@@ -24,7 +24,7 @@ var CreateRecipe = (function(window, $) {
 		_initButtons();
 		_initXEditable();
 		_loadFooterEvents();
-		_loadScrollEvents();
+		//_loadScrollEvents();
 		_loadSaveEvents();
 		_loadCancelEvents();
 		_loadResizeEvents();
@@ -131,13 +131,21 @@ var CreateRecipe = (function(window, $) {
 	},
 	
 	_loadSaveEvents = function() {
-		//shareLink = (document.domain == '127.0.0.1' || document.domain == 'localhost')? 'http://goo.gl/WkwXJY': 'http://goo.gl/8SkjI8';
-			
+		var recipeName = $('#recipeName').val();
 		$('#save').click(function() {
 			saveState = true;
-			saveModal.find('.modal-body').html('<span>' + $('#recipeName').val() + '</a> added to \'My Recipes\'!</span>');
+			saveModal.find('.modal-body').html('<span>' + ((recipeName == '')? 'New recipe': recipeName) + ' added to \'My Recipes\'!</span>');
 			saveModal.on('hidden.bs.modal', function() {
 				window.location.href = 'myRecipes.html';
+			});
+			saveModal.modal('show', calibrateSaveModal());
+		});
+		
+		$('#update').click(function() {
+			saveState = true;
+			saveModal.find('.modal-body').html('<span>' + ((recipeName == '')? 'New recipe': recipeName) + ' updated!</span>');
+			saveModal.on('hidden.bs.modal', function() {
+				window.location.href = '../myRecipes.html';
 			});
 			saveModal.modal('show', calibrateSaveModal());
 		});

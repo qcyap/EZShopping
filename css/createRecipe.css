@@ -11,14 +11,11 @@ td:last-child {
 }
 
 .ingredient_scroll {
-	height: 250px;
+	height: 200px;
+	margin-bottom: 5px;
 	overflow-y: scroll;
 }
 
 .ingredient_scroll::-webkit-scrollbar {
 	display: none;
-}
-
-#ingredientsTable{
-	margin-top: 0px;
 }
