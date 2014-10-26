@@ -60,7 +60,7 @@ input[type=text] {
 	padding-right: 0px;
 }
 
-.close {
+.close, .like.unliked, .like.liked:hover {
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 18px;
@@ -71,7 +71,8 @@ input[type=text] {
 	text-decoration: none;
 }
 
-.close:hover {
+.close:hover, .like.liked, .like.unliked:hover {
+	font-size: 20px;
 	color: #d9534f;
 	text-decoration: none;
 	opacity: 1;

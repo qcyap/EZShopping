@@ -108,7 +108,7 @@ var CreateRecipe = (function(window, $) {
 		});
 	},
 	
-	_loadScrollEvents = function() {		
+	_loadScrollEvents = function() {
 		$('.ingredient_scroll').scroll(function() {
 			var scrollTop = $(this).scrollTop();
 			var maxScrollTop = $(document).height() - $(window).height();

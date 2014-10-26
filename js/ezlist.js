@@ -135,7 +135,7 @@ var Ezlist = (function(window, $) {
 		});
 	},
 	
-	_loadScrollEvents = function() {		
+	_loadScrollEvents = function() {
 		$(window).scroll(function() {
 			var scrollTop = $(this).scrollTop();
 			var maxScrollTop = $(document).height() - $(window).height();
@@ -159,7 +159,7 @@ var Ezlist = (function(window, $) {
 	},
 	
 	_loadCommentsEvents = function() {
-		$('#comments').click(function() {	
+		$('#comments').click(function() {
 			commentsModal.find('.modal-header').css('padding', '0px 10px');
 			commentsModal.find('.modal-body').css('padding', '10px');
 			commentsModal.find('.modal-footer').css('padding', '5px 10px');
