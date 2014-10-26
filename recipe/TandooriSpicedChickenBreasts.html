@@ -1,0 +1,128 @@
+<!DOCTYPE  html>
+<html>
+	<head>
+		<title>EZShopping</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		
+		<!-- Cascading Stylesheets -->
+		<link href="../css/vendor/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/vendor/bootstrap-editable.css" rel="stylesheet">
+		<link href="../css/vendor/typeahead.js-bootstrap.css" rel="stylesheet">
+		<link href="../css/styles.css" rel="stylesheet">
+		<link href="../css/createRecipe.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		
+		<!-- Navigation Bar at the top Test-->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div id="header" class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						
+					</button>
+					<a class="navbar-brand" href="../">EZShopping</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="myLists.html">My Lists</a></li>
+						<li><a href="myRecipes.html">My Recipes</a></li>
+						<li><a href="#settings">Settings</a></li>
+						<li><a href="#signoff">Sign Off</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		
+		<!-- Main Functionality Navigation -->
+		<div id="mainFunction" class="container">
+			<ul id="mainFunctionList" class="nav nav-tabs">
+				<li class="full_width_center"><a href="../ezlist.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
+				<li class="full_width_center active"><a href="../recipes.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipes</a></li>
+			</ul>
+		</div> 
+		
+		<div class="container">
+			<form id="inputDataRecipe" role="form">
+			
+				<!-- Heading -->
+				<div class="form-group">
+					<h4 class="col-sm-12">Tandoori Spieced Chicken Breasts</h4>
+				</div>
+				
+				<!-- Ingredients -->
+				<div class="form-group">
+					<p></p>
+					<label for="ingriedients" class="col-xs-12">Ingredients</label>
+					<div class="container">
+						<table class="table table-striped" id="ingriedientsTable">
+							<thead>
+								<tr>
+									<th class="col-xs-8"><p>Description</p></td>
+									<th class="col-xs-4"><p>Amount</p></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col-xs-8"><p>Large garlic clove</p></td>
+									<td class="col-xs-4"><p>1</p></td>
+								</tr>
+								<tr>
+									<td class="col-xs-8"><p>Cup of low-fat plain yogurt</p></td>
+									<td class="col-xs-4"><p>1</p></td>
+								</tr>
+								<tr>
+									<td class="col-xs-8"><p>Small Red Onion</p></td>
+									<td class="col-xs-4"><p>2</p></td>
+								</tr>
+								<tr>
+									<td class="col-xs-8"><p>Skinles boneless chicken breast</p></td>
+									<td class="col-xs-4"><p>4</p></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<p></p>
+					<label class="col-xs-12" for="directions">Directions</label>
+					<div class="col-xs-12">
+						<!-- Directions -->
+						<p>Make spice paste: Mince garlic with salt and mash to a paste. Wearing protective gloves, mince chile (including seeds for a spicier paste) and in a bowl stir together with garlic paste and remaining spice paste ingredients.
+						Make 3 diagonal cuts about 1/4 inch deep in each chicken breast and rub spice paste into cuts and all over chicken. Marinate chicken, covered, 30 minutes at cool room temperature.
+						Preheat broiler and line broiler pan with foil. Halve onion through root end and reserve 1 half for sauce. Thinly slice remaining onion half, separating layers, and in a small bowl soak onion slices in ice water to cover while broiling chicken.
+						Arrange chicken without crowding on rack of broiler pan. Brush chicken with 1 teaspoon vegetable oil and broil about 3 inches from heat 8 minutes. Turn chicken over and brush with remaining teaspoon vegetable oil. Broil chicken until lightly browned and just cooked through, about 6 minutes more.
+						Make sauce while chicken is broiling: Mince enough reserved onion to measure 1 tablespoon and in a small bowl stir together with all sauce ingredients.
+						Drain soaked onion and pat dry between paper towels. Top chicken with onion slices and serve with yogurt sauce.</p>
+						<br /><br /><br />
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<!-- Footer -->
+		<div id="footer" class="navbar-default navbar-fixed-bottom">
+			<div class="container">
+				<div class="btn-group btn-group-justified">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default bg" onclick="window.history.go(-1); return false;"><center><span class="glyphicon glyphicon-arrow-left"></center></span>Back</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default bg" onclick="window.location.href='../ezlistWithChickenRice.html'; return false;"><center><span class="glyphicon glyphicon-import"></center></span>Add to EZList</button>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<!-- JavaScript -->
+		<script src="../js/vendor/jquery.min.js"></script>
+		<script src="../js/vendor/bootstrap.min.js"></script>
+		<script src="../js/vendor/bootstrap-editable.min.js"></script>
+		<script src="../js/vendor/typeahead.js"></script>
+		<script src="../js/vendor/typeaheadjs.js"></script>
+		<script src="../js/HainaneseChickenRice.js"></script>
+	</body>
+</html>
