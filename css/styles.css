@@ -42,9 +42,10 @@ td {
 input[type=text] {
 	width: 100% !important;
 }
-.backgroundImage{
-	position: fixed;
-	margin-top: 120px;
+#backgroundImage{
+	
+	margin-top: 100px;
+	margin-left: 50px;
 }
 .full_width_center {
 	width: 50%;
