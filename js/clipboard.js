@@ -8,7 +8,7 @@ var Clipboard = (function(window, $) {
 	_copy = function(relativePath) {
 		copyLink = (document.domain == '127.0.0.1' || document.domain == 'localhost')? 'http://goo.gl/WkwXJY': 'http://goo.gl/8SkjI8';
 		
-		$('#save').zclip({
+		$('#share').zclip({
 			path: ((relativePath == undefined)? '' : relativePath) + 'js/vendor/ZeroClipboard.swf',
 			copy: function() {
 				return copyLink;
