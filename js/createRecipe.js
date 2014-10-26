@@ -109,13 +109,13 @@ var CreateRecipe = (function(window, $) {
 	},
 	
 	_loadScrollEvents = function() {		
-		$(window).scroll(function() {
+		$('.ingredient_scroll').scroll(function() {
 			var scrollTop = $(this).scrollTop();
 			var maxScrollTop = $(document).height() - $(window).height();
 			var timeouts = [];
 			
 			// Load new rows
-			if (scrollTop > (0.8 * maxScrollTop)) {
+			if (scrollTop > (0.1 * maxScrollTop)) {
 				$('#ingredientsTable').find('tbody').append(
 					'<tr>' +
 						'<td class="col-xs-9"><a href="#" data-type="typeaheadjs"></a></td>' +
@@ -160,7 +160,7 @@ var CreateRecipe = (function(window, $) {
 	_loadResizeEvents = function() {
 		$(window).on('resize', function () {
 			saveModal.find(':visible', calibrateSaveModal());
-			createModal.find(':visible', calibrateCancelModal());
+			cancelModal.find(':visible', calibrateCancelModal());
 		});
 	};
 	

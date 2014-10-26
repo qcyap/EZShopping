@@ -1,7 +1,3 @@
-#ingredientsTable{
-	margin-top: 0px;
-}
-
 td:last-child {
 	min-width: 36px;
 }
@@ -12,4 +8,17 @@ td:last-child {
 
 .editable-submit, .editable-cancel {
 	display: none;
+}
+
+.ingredient_scroll {
+	height: 250px;
+	overflow-y: scroll;
+}
+
+.ingredient_scroll::-webkit-scrollbar {
+	display: none;
+}
+
+#ingredientsTable{
+	margin-top: 0px;
 }
