@@ -32,7 +32,8 @@ var Recipes = (function(window, $) {
 	},
 	
 	_loadLikeEvents = function() {
-		$('.like').on('click touchend', function() {
+		$('.like').on('click touchend', function(e) {
+			e.preventDefault();
 			if ($(this).hasClass('unliked')) {
 				$(this).removeClass('unliked');
 				$(this).addClass('liked');
@@ -42,8 +43,7 @@ var Recipes = (function(window, $) {
 			else {
 				$(this).removeClass('liked');
 				$(this).addClass('unliked');
-			}
-			
+			}	
 		});
 	},
 	
