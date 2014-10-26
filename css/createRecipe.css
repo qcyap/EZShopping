@@ -1,3 +1,15 @@
-#ingriedientsTable{
+#ingredientsTable{
 	margin-top: 0px;
+}
+
+td:last-child {
+	min-width: 36px;
+}
+
+.editable-container, .editable-input, .twitter-typeahead, .editableform > .control-group.form-group, .tt-dropdown-menu {
+	width: 100% !important;
+}
+
+.editable-submit, .editable-cancel {
+	display: none;
 }
