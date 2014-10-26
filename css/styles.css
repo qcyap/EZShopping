@@ -42,10 +42,12 @@ td {
 input[type=text] {
 	width: 100% !important;
 }
+
 #backgroundImage{
 	margin-top: 100px;
 	margin-left: 50px;
 }
+
 .full_width_center {
 	width: 50%;
 	text-align: center;
@@ -66,13 +68,14 @@ input[type=text] {
 	line-height: 18px;
 	color: #d9534f;
 	text-shadow: 0 1px 0 #ffffff;
-	opacity: 0.6;
-	filter: alpha(opacity=60);
+	opacity: 0.5;
+	filter: alpha(opacity=50);
 	text-decoration: none;
 }
 
 .close:hover, .like.liked, .like.unliked:hover {
 	font-size: 20px;
+	line-height: 18px;
 	color: #d9534f;
 	text-decoration: none;
 	opacity: 1;

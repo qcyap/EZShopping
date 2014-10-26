@@ -32,7 +32,7 @@ var Recipes = (function(window, $) {
 	},
 	
 	_loadLikeEvents = function() {
-		$('.like').click(function() {
+		$('.like').on('click touchend', function() {
 			if ($(this).hasClass('unliked')) {
 				$(this).removeClass('unliked');
 				$(this).addClass('liked');
