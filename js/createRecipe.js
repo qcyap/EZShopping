@@ -157,9 +157,6 @@ var CreateRecipe = (function(window, $) {
 				cancelModal.find('button[type="button"]').click();
 			}
 			else {
-				cancelModal.find('.modal-header').css('padding', '0px 10px');
-				cancelModal.find('.modal-body').css('padding', '10px');
-				cancelModal.find('.modal-footer').css('padding', '5px 10px');
 				cancelModal.modal('show', calibrateCancelModal());
 			}
 		});

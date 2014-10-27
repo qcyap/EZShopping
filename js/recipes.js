@@ -28,7 +28,6 @@ var Recipes = (function(window, $) {
 				$(this).toggle(id.indexOf(value) !== -1);
 			});
 		});
-
 	},
 	
 	_loadLikeEvents = function() {

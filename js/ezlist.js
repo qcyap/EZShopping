@@ -160,9 +160,6 @@ var Ezlist = (function(window, $) {
 	
 	_loadCommentsEvents = function() {
 		$('#comments').click(function() {
-			commentsModal.find('.modal-header').css('padding', '0px 10px');
-			commentsModal.find('.modal-body').css('padding', '10px');
-			commentsModal.find('.modal-footer').css('padding', '5px 10px');
 			commentsModal.css('z-index', '100');
 			commentsModal.addClass('bottom');
 			commentsModal.modal('show', calibrateCommentsModal());
@@ -186,9 +183,6 @@ var Ezlist = (function(window, $) {
 				createModal.find('button[type="button"]').click();
 			}
 			else {
-				createModal.find('.modal-header').css('padding', '0px 10px');
-				createModal.find('.modal-body').css('padding', '10px');
-				createModal.find('.modal-footer').css('padding', '5px 10px');
 				createModal.modal('show', calibrateCreateModal());
 			}
 		});

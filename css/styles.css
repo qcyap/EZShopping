@@ -83,6 +83,18 @@ input[type=text] {
 	cursor: pointer;
 }
 
+.modal-header {
+	padding: 0px 10px;
+}
+
+.modal-body {
+	padding: 10px;
+}
+
+.modal-footer {
+	padding: 5px 10px;
+}
+
 #header {
 	padding-left: 15px !important;
 	padding-right: 15px !important;

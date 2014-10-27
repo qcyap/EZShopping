@@ -57,15 +57,15 @@
 				<tbody>
 					<tr>
 						<td class="col-xs-11"><a href="myList/myList-20141021-1.html"><p>List from 21/10/2014</p></a></td>
-						<td class="col-xs-1"><button onclick="deleteRow(this)" class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
+						<td class="col-xs-1"><button class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
 					</tr>
 					<tr>
 						<td class="col-xs-11"><a href="myList/myList-20141022-1.html"><p>List from 22/10/2014</p></a></td>
-						<td class="col-xs-1"><button onclick="deleteRow(this)" class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
+						<td class="col-xs-1"><button class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
 					</tr>
 					<tr>
 						<td class="col-xs-11"><a href="myList/myList-20141023-1.html"><p>List from 23/10/2014</p></a></td>
-						<td class="col-xs-1"><button onclick="deleteRow(this)" class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
+						<td class="col-xs-1"><button class="close"><i class="glyphicon glyphicon-remove"></i></button></td>
 					</tr>
 				</tbody>
 			</table>
@@ -73,15 +73,27 @@
 		
 		<!-- Footer -->
 		
+		<!-- Delete Modal -->
+		<div id="deleteModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4>Confirm delete</h4>
+					</div>
+					<div class="modal-body">
+						<span>Once deleted, list cannot be recovered! Are you sure?</span>
+					</div>
+					<div class="modal-footer">
+						<button type="cancel" class="btn" data-dismiss="modal" data-value="0">Cancel</button>
+						<button type="button" class="btn btn-danger" data-value="1">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<!-- JavaScript -->
 		<script src="js/vendor/jquery.min.js"></script>
 		<script src="js/vendor/bootstrap.min.js"></script>
-		<script language="javascript">
-			function deleteRow(r)
-			{
-				var i = r.parentNode.parentNode.rowIndex;
-				document.getElementById("mainTableList").deleteRow(i);
-			}
-		</script> 
+		<script src="js/myLists.js"></script>
 	</body>
 </html>
