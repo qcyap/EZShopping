@@ -136,7 +136,7 @@ var CreateRecipe = (function(window, $) {
 			saveState = true;
 			saveModal.find('.modal-body').html('<span>' + ((recipeName == '')? 'New recipe': recipeName) + ' added to \'My Recipes\'!</span>');
 			saveModal.on('hidden.bs.modal', function() {
-				window.location.href = 'myRecipes.html';
+				window.location.href = 'myRecipesWithJanetteChickenRice.html';
 			});
 			saveModal.modal('show', calibrateSaveModal());
 		});
@@ -145,7 +145,7 @@ var CreateRecipe = (function(window, $) {
 			saveState = true;
 			saveModal.find('.modal-body').html('<span>' + ((recipeName == '')? 'New recipe': recipeName) + ' updated!</span>');
 			saveModal.on('hidden.bs.modal', function() {
-				window.location.href = '../myRecipes.html';
+				window.location.href = '../myRecipesWithJanetteChickenRice.html';
 			});
 			saveModal.modal('show', calibrateSaveModal());
 		});
