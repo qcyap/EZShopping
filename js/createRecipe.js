@@ -131,9 +131,10 @@ var CreateRecipe = (function(window, $) {
 	},
 	
 	_loadSaveEvents = function() {
-		var recipeName = $('#recipeName').val();
+		var recipeName;
 		$('#save').click(function() {
 			saveState = true;
+			recipeName = $('#recipeName').val();
 			saveModal.find('.modal-body').html('<span>' + ((recipeName == '')? 'New recipe': recipeName) + ' added to \'My Recipes\'!</span>');
 			saveModal.on('hidden.bs.modal', function() {
 				window.location.href = 'myRecipesWithJanetteChickenRice.html';
@@ -143,6 +144,7 @@ var CreateRecipe = (function(window, $) {
 		
 		$('#update').click(function() {
 			saveState = true;
+			recipeName = $('#recipeName').val();
 			saveModal.find('.modal-body').html('<span>' + ((recipeName == '')? 'New recipe': recipeName) + ' updated!</span>');
 			saveModal.on('hidden.bs.modal', function() {
 				window.location.href = '../myRecipesWithJanetteChickenRice.html';
