@@ -168,7 +168,23 @@ var Ezlist = (function(window, $) {
 	},
 	
 	_loadShareEvents = function() {
-		shareLink = (document.domain == '127.0.0.1' || document.domain == 'localhost')? 'http://goo.gl/WkwXJY': 'http://goo.gl/8SkjI8';
+		var p = location.pathname.split("/");
+		var endpoint = p[p.length-1];
+		var isLocal = (document.domain == '127.0.0.1' || document.domain == 'localhost');
+		switch(endpoint) {
+			case 'myList-20141021-1.html', 'ezlistWithChickenRice.html':
+				shareLink = (isLocal)? 'http://goo.gl/WkwXJY': 'http://goo.gl/8SkjI8';
+				break;
+			case 'myList-20141022-1.html':
+				shareLink = (isLocal)? 'http://goo.gl/0m6Pmf': 'http://goo.gl/VEZwC6';
+				break;
+			case 'myList-20141023-1.html':
+				shareLink = (isLocal)? 'http://goo.gl/OH2q73': 'http://goo.gl/MCi6Ax';
+				break;
+			default:
+				shareLink = 'http://goo.gl/' + randomString(6);
+				break;
+		}
 			
 		$('#share').click(function() {
 			saveState = true;
@@ -218,6 +234,27 @@ var Ezlist = (function(window, $) {
 		var offset = ($(window).height() - dialog.height()) / 2;
 		// Center modal vertically in window
 		dialog.css("margin-top", offset);
+	}
+	
+	function randomString(length, special) {
+		var iteration = 0;
+		var password = "";
+		var randomNumber;
+		if(special == undefined){
+			var special = false;
+		}
+		while(iteration < length){
+			randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+			if(!special){
+				if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+				if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+				if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+				if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+			}
+			iteration++;
+			password += String.fromCharCode(randomNumber);
+		}
+		return password;
 	}
 	
 	return {
