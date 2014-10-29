@@ -24,7 +24,7 @@ var Recipes = (function(window, $) {
 
 			$('#mainTableList').find('tr').each(function(index) {
 				if (index === 0) return;
-				var id = $(this).find('td').first().text().toLowerCase();;
+				var id = $(this).find('td').first().text().toLowerCase();
 				$(this).toggle(id.indexOf(value) !== -1);
 			});
 		});
