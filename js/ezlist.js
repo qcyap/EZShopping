@@ -172,7 +172,7 @@ var Ezlist = (function(window, $) {
 		var endpoint = p[p.length-1];
 		var isLocal = (document.domain == '127.0.0.1' || document.domain == 'localhost');
 		switch(endpoint) {
-			case 'myList-20141021-1.html', 'ezlistWithChickenRice.html':
+			case 'myList-20141021-1.html': case 'ezlistWithChickenRice.html':
 				shareLink = (isLocal)? 'http://goo.gl/WkwXJY': 'http://goo.gl/8SkjI8';
 				break;
 			case 'myList-20141022-1.html':
