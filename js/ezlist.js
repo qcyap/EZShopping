@@ -3,11 +3,12 @@ $(document).ready( function() {
 });
 
 var Ezlist = (function(window, $) {
-	var commentsModal, shareModal, createModal;
+	var addRecipeModal, commentsModal, shareModal, createModal;
 	var content;
 	var shareLink, saveState;
 	
 	var init = function() {
+		addRecipeModal = $('#addRecipeModal');
 		commentsModal = $('#commentsModal');
 		shareModal = $('#shareModal');
 		createModal = $('#createModal');
@@ -26,6 +27,7 @@ var Ezlist = (function(window, $) {
 		_initXEditable();
 		_loadFooterEvents();
 		_loadScrollEvents();
+		_loadAddRecipeEvents();
 		_loadCommentsEvents();
 		_loadShareEvents();
 		_loadCreateEvents();
@@ -158,6 +160,33 @@ var Ezlist = (function(window, $) {
 		});
 	},
 	
+	_loadAddRecipeEvents = function() {
+		_searchRecipeTable();
+		$('#addRecipe').click(function() {
+			addRecipeModal.modal('show', calibrateAddRecipeModal());
+			$('.modal-backdrop').removeClass("modal-backdrop");
+		});
+	},
+	
+	_searchRecipeTable = function() {
+		$('#search').keyup(function() {
+			var value = this.value.toLowerCase();;
+
+			$('#recipeTableList').find('tr').each(function(index) {
+				if (index === 0) return;
+				var id = $(this).find('td').first().text().toLowerCase();
+				$(this).toggle(id.indexOf(value) !== -1);
+			});
+			
+			if (($('#recipeTableList').find('tr:visible').length - 1) == 0) {
+				$('#recipeTableList').find('tfoot').html('<tr><td>No results found</tr></td>');
+			}
+			else {
+				$('#recipeTableList').find('tfoot').empty();
+			}
+		});
+	},
+	
 	_loadCommentsEvents = function() {
 		$('#comments').click(function() {
 			commentsModal.css('z-index', '100');
@@ -206,11 +235,20 @@ var Ezlist = (function(window, $) {
 	
 	_loadResizeEvents = function() {
 		$(window).on('resize', function () {
+			addRecipeModal.find(':visible', calibrateAddRecipeModal());
 			commentsModal.find(':visible', calibrateCommentsModal());
 			shareModal.find(':visible', calibrateShareModal());
 			createModal.find(':visible', calibrateCreateModal());
 		});
 	};
+	
+	function calibrateAddRecipeModal() {
+		$(this).css('display', 'block');
+		var dialog = addRecipeModal.find(".modal-dialog");
+		var offset = ($(window).height() - dialog.height()) / 3;
+		// Center modal vertically in window
+		dialog.css("margin-top", offset);
+	}
 	
 	function calibrateCommentsModal() {
 		$(this).css('display', 'block');

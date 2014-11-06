@@ -27,6 +27,13 @@ var Recipes = (function(window, $) {
 				var id = $(this).find('td').first().text().toLowerCase();
 				$(this).toggle(id.indexOf(value) !== -1);
 			});
+			
+			if (($('#mainTableList').find('tr:visible').length - 1) == 0) {
+				$('#mainTableList').find('tfoot').html('<tr><td>No results found</tr></td>');
+			}
+			else {
+				$('#mainTableList').find('tfoot').empty();
+			}
 		});
 	},
 	

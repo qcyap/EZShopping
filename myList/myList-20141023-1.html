@@ -8,6 +8,7 @@
 		<link href="../css/vendor/bootstrap.min.css" rel="stylesheet">
 		<link href="../css/vendor/bootstrap-editable.css" rel="stylesheet">
 		<link href="../css/vendor/typeahead.js-bootstrap.css" rel="stylesheet">
+		<link href="../css/vendor/whhg.css" rel="stylesheet">
 		<link href="../css/styles.css" rel="stylesheet">
 		<link href="../css/ezlist.css" rel="stylesheet">
 	</head>
@@ -41,8 +42,8 @@
 		<!-- Main Functionality Navigation -->
 		<div id="mainFunction" class="container">
 			<ul id="mainFunctionList" class="nav nav-tabs">
-				<li class="full_width_center active"><a href="../ezlist.html"><center><span class="glyphicon glyphicon-home"></center></span>EZList</a></li>
-				<li class="full_width_center"><a href="../recipes.html"><center><span class="glyphicon glyphicon-glass"></center></span>Recipes</a></li>
+				<li class="full_width_center active"><a href="../ezlist.html"><center><span class="icon-th-list"></center></span>EZList</a></li>
+				<li class="full_width_center"><a href="../recipes.html"><center><span class="icon-restaurantmenu"></center></span>Recipes</a></li>
 			</ul>
 		</div> 
 		
@@ -152,15 +153,56 @@
 			<div class="container">
 				<div class="btn-group btn-group-justified">
 					<div class="btn-group">
-						<button type="button" id="comments" class="btn btn-default bg"><center><span class="glyphicon glyphicon-comment"></center></span>Comments</button>
+						<button type="button" id="addRecipe" class="btn btn-default bg"><center><span class="icon-chef"></center></span>Add Recipe</button>
 					</div>
 					<div class="btn-group">
-						<button type="button" id="share" class="btn btn-default bg"><center><span class="glyphicon glyphicon-share-alt"></center></span>Share</button>
-					</div>	
-					<div class="btn-group">
-						<button type="button" id="create" class="btn btn-default bg"><center><span class="glyphicon glyphicon-plus"></center></span>Create New List</button>
+						<button type="button" id="comments" class="btn btn-default bg"><center><span class="icon-comment"></center></span>Comments</button>
 					</div>
-				</div>	
+					<div class="btn-group">
+						<button type="button" id="share" class="btn btn-default bg"><center><span class="icon-share-alt"></center></span>Share</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" id="create" class="btn btn-default bg"><center><span class="icon-plus"></center></span>New List</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Add Recipe Modal -->
+		<div id="addRecipeModal" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<table id="recipeTableList" class="table table-striped">
+							<thead>
+								<tr>
+									<th colspan="2" class="col-xs-12"><input id="search" type="text" class="form-control" placeholder="Search recipes"></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col-xs-12"><a href="../recipe/HainaneseChickenRice.html"><p>Hainanese Chicken Rice</p></a></td>
+								</tr>
+								<tr>
+									<td class="col-xs-12"><a href="../recipe/TandooriSpicedChickenBreasts.html">Tandoori-Spiced Chicken Breasts</a></td>
+								</tr>
+								<tr>
+									<td class="col-xs-12"><a href="../recipe/SpicySesameNoodles.html">Spicy Sesame Noodles with Chopped Peanuts and Thai Basil</a></td>
+								</tr>
+								<tr>
+									<td class="col-xs-12"><a href="../recipe/PizzaWithPesto.html">Pizza with Pesto, Fresh Tomatoes, and Mozzarella</a></td>
+								</tr>
+								<tr>
+									<td class="col-xs-12"><a href="../recipe/CornAndZucchini.html">Corn and Zucchini Salad with Feta</a></td>
+								</tr>
+							</tbody>
+							<tfoot></tfoot>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button type="cancel" class="btn" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		
