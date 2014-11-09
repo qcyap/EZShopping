@@ -245,7 +245,7 @@ var Ezlist = (function(window, $) {
 	function calibrateAddRecipeModal() {
 		$(this).css('display', 'block');
 		var dialog = addRecipeModal.find(".modal-dialog");
-		var offset = ($(window).height() - dialog.height()) / 3;
+		var offset = $(window).height() - 500;
 		// Center modal vertically in window
 		dialog.css("margin-top", offset);
 	}
